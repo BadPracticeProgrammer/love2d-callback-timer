@@ -29,6 +29,10 @@ function love.load()
   CallbackTimer:add('loopedidoop', 5, function() 
     print('I get called every 5 seconds');
   end, true)
+  
+  -- Start the timers
+  CallbackTimer:start('basicTimer');
+  CallbackTimer:start('loopedidoop');
 end
 
 function love.update(dt)
